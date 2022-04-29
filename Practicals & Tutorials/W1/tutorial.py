@@ -17,14 +17,14 @@ def sum_of_squares_odd(data: int):
     return sum([x**2 for x in range(max(1, data+1)) if x//2 == x/2])
 
 
-def range_constructor():
+def range_constructor() -> list:
     return range(50, 81, 10), range(8, -9, -1)
 
-def num_vowels(text: str):
+def num_vowels(text: str) -> int:
     len(filter(lambda x:x in "aeiou"), text)
     return len([x for x in text if x in "aeiou"])
 
-def hash_map(text: str):
+def hash_map(text: str) -> bool:
     hashmap = {}
     for x in text:
         if x in hashmap:
@@ -32,5 +32,8 @@ def hash_map(text: str):
         hashmap[x] = x
     return False
 
+def troll(yes):
+   return list(set(yes)) == yes
 
+print(troll([1,2,3,3]))
 print(sum_of_squares_odd(10))
