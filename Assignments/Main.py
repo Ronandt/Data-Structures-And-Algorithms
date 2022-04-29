@@ -1,5 +1,5 @@
-from Declan_Isaac_Kuok_212803T_IT2153_06_2 import AbstractFilterMethods, AbstractSearchMethods, AbstractSortingMethods
-from Declan_Isaac_Kuok_212803T_IT2153_06 import StaycationBookingRecord
+from AbstractClasses import AbstractFilterMethods, AbstractSearchMethods, AbstractSortingMethods
+from StaycationBookingRecord import StaycationBookingRecord
 from sys import exit
 
 
@@ -58,9 +58,13 @@ class StaycationBookingRecordFactory():
             pass
         elif query == "filter":
             pass
+        elif query == "display":
+            pass
         elif query == "exit":
+            print("You have exited out.")
             exit()
         else:
             print("That is not a query")
+
 
 StaycationBookingRecordFactory()

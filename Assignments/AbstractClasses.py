@@ -20,12 +20,11 @@ class AbstractSortingMethods(ABC):
 
 
 class AbstractSearchMethods(ABC):
-    
+ 
     @abstractmethod
     def linear_search(self):
         pass
-
-
+    
     @abstractmethod
     def binary_search(self):
         pass
