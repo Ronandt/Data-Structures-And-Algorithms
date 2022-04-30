@@ -24,10 +24,24 @@ class AlgorithmMethods(AbstractSortingMethods, AbstractFilterMethods, AbstractSe
         del self._initaliser
 
     def bubble_sort(self, callback=None) -> list:
-        pass
+        for _ in range(len(self.initaliser)):
+                value = False
+                for c in range(len(self.initaliser) - 1):
+                    if AlgorithmDataPipeline.compare(self.initaliser[c].customer_name.lower().strip(), self.initaliser[c+1].customer_name.lower().strip()):
+                        self.initaliser[c + 1], self.initaliser[c] = self.initaliser[c], self.initaliser[c+1]
+                        value = True
+                if value == False:
+                    return self.initaliser
+
+
 
     def selection_sort(self, callback=None) -> list:
-        pass
+        for count in range(len(self.initaliser)):
+            minimum = count
+            for x in range(count, len(self.initaliser)):
+                if AlgorithmDataPipeline.compare(self.initaliser[minimum].package_name,self.initaliser[x].package_name):
+                    minimum = x
+            self.initaliser[minimum], self.initaliser[count] = self.initaliser[count], self.initaliser[minimum]
 
     def insertion_sort(self, callback=None) -> list:
         pass

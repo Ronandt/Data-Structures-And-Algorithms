@@ -16,11 +16,30 @@ def binarySearchWhileLoop(sortedList: list, target: int) -> bool:
             return True
     return False
 
-        
-        
-        
-        
+def binryOne(sortedList: list, target: int, pointer1 , pointer2) -> bool:
+
+ 
+    
+    if pointer2 >= pointer1:
+        mid = (pointer1 + pointer2 )//2 #assuming simply taking the length
+        print(mid)
+
+      
+        if sortedList[mid] == target:
+            return True
+        elif sortedList[mid] > target:
+            return binryOne(sortedList, target, pointer1, mid - 1)
+        else:
+            return binryOne(sortedList, target, mid + 1, pointer2)
+    else:
+        print("f")
+        return False
 
 
-print(binarySearch(list(range(4500)), 5000))
-print(binarySearchWhileLoop(list(range(4500)), 5000))
+        
+        
+lists = list(range(3))      
+print(binryOne(lists, 2, 0, len(lists) - 1))
+
+#print(binarySearch(list(range(4500)), 5000))
+#print(binarySearchWhileLoop(list(range(4500)), 5000))
