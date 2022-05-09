@@ -35,3 +35,4 @@ class AbstractFilterMethods(ABC):
     @abstractmethod
     def range_filter(self):
         pass
+

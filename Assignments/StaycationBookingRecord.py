@@ -58,46 +58,29 @@ class StaycationBookingRecord:
     def package_cost_per_pax(self) -> float:
         return self._package_cost_per_pax
 
-    @number_of_pax.getter
+    @package_cost_per_pax.getter
     def package_cost_per_pax(self) -> float:
         return self._package_cost_per_pax
 
-    @number_of_pax.setter
-    def package_cost_per_pax(self, package_cost_per_pax: int) -> None:
+    @package_cost_per_pax.setter
+    def package_cost_per_pax(self, package_cost_per_pax: float) -> None:
         self._package_cost_per_pax = package_cost_per_pax
 
-    @number_of_pax.deleter
+    @package_cost_per_pax.deleter
     def package_cost_per_pax(self) -> None:
         del self._package_cost_per_pax
     
     def __str__(self) -> str:
-        return f"Package name: {self._package_name}, Customer name: {self._customer_name}, Number of pax: {self._number_of_pax}, Package cost per pax: {self._package_cost_per_pax}"
+        return f"Package name: {self.package_name}, Customer name: {self.customer_name}, Number of pax: {self.number_of_pax}, Package cost per pax: {self.package_cost_per_pax}"
 
     def __repr__(self) -> str:
-        return f"(PackageName: {self._package_name}, CustomerName: {self._customer_name}, NumberOfPax: {self._number_of_pax}, PackageCostPerPax: {self._package_cost_per_pax})"
+        return f"(PackageName: {self.package_name}, CustomerName: {self.customer_name}, NumberOfPax: {self.number_of_pax}, PackageCostPerPax: {self.package_cost_per_pax})"
     
     def __eq__(self, __o: object) -> bool:
         for x in [c for c in dir(self) if not c.startswith("__")]:
             if getattr(__o, x) != getattr(self, x):
                 return False
         return True
-
-    '''def __lt__(self, __o : object) -> bool: #sort record by package name using selection sort
-        pass
-
-    def __gt__(self, __o : object) -> bool:
-        pass
-
-    def __ne__(self, __o: object) -> bool:
-        pass
-
-    def __len__(self) -> int:
-        pass
-
-    def __add__(self, string : str) -> str:
-        pass'''
-
-
 
     
 
