@@ -43,3 +43,5 @@ print(binryOne(lists, 2, 0, len(lists) - 1))
 
 #print(binarySearch(list(range(4500)), 5000))
 #print(binarySearchWhileLoop(list(range(4500)), 5000))
+print("a" > "b")
+print("a" < "b")
