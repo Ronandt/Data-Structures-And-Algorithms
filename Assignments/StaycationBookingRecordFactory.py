@@ -7,7 +7,7 @@ from StaycationBookingRecordInitaliser import StaycationBookingRecordInitaliser
 class StaycationBookingRecordFactory:
     initalise = StaycationBookingRecordInitaliser([
         StaycationBookingRecord("Sick Package", "Potimas", 12, 69.69),
-        StaycationBookingRecord("Extravagant Package", "Mother", 2, 69.420),
+        StaycationBookingRecord("Sick Package", "Mother", 2, 69.420),
         StaycationBookingRecord("Amazing Package", "Shiraori", 4, 21),
         StaycationBookingRecord("Royal Package", "Ronandt", 8, 727),
         StaycationBookingRecord("Royal Package", "Felmina", 423, 727.727),
