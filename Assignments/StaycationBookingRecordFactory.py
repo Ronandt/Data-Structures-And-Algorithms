@@ -12,7 +12,7 @@ class StaycationBookingRecordFactory:
         StaycationBookingRecord("Royal Package", "Ronandt", 8, 727),
         StaycationBookingRecord("Royal Package", "Felmina", 423, 727.727),
         StaycationBookingRecord("Maximum Package", "D", 893, 177013),
-        StaycationBookingRecord("Phantasmal Package", "Meido", 23, 10),
+        StaycationBookingRecord("Phantasmal Package", "D", 23, 10),
         StaycationBookingRecord("Mythical Package", "Sariel", 420, 65),
         StaycationBookingRecord("Legendary Package", "Gyurie", 1, 7),
         StaycationBookingRecord("Normal Package", "Sophia", 3, 3)])
