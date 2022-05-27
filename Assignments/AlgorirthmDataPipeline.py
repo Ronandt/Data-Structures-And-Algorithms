@@ -30,7 +30,7 @@ class AlgorithmDataPipeline:
             raw_customer = input(
                 "Change customer name (input nothing to skip): ").strip()
             if raw_customer != "":
-                if not raw_package.replace(" ", "").isalpha():
+                if not raw_customer.replace(" ", "").isalpha():
                     print("Must contain only letters")
                     continue
                 arg1.customer_name = raw_customer

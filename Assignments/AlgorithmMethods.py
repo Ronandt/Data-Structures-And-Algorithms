@@ -103,7 +103,7 @@ class AlgorithmMethods(AbstractSortingMethods, AbstractFilterMethods, AbstractSe
                         indexes.append(current_index_minus)
      
                  
-                    while current_index_positive < (len(self.initaliser) + 1) and self.initaliser[current_index_positive + 1].package_name.lower().strip() == target:
+                    while current_index_positive + 1 < (len(self.initaliser)) and self.initaliser[current_index_positive + 1].package_name.lower().strip() == target:
                         current_index_positive += 1
                         indexes.append(current_index_positive)
                          
