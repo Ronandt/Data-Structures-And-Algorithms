@@ -20,9 +20,9 @@ class StaycationBookingRecordFactory:
     formatingTwo = 90 * "*"
     while 1:
         query = input(
-            f"\n{formating}CHOICES{formating}\n1.sort\n2.search & update\n3.filter\n4.display\n5.exit\n{formating}{formating}======\nWhat is your choice: ").lower().strip()
+            f"\n{formating}CHOICES{formating}\n1.Sort\n2.Search & Update\n3.Filter\n4.Display\n5.Exit\n{formating}{formating}======\nWhat is your choice: ").lower().strip()
         if query == "1":
-            types = input(f"\n{formating}SORT{formating}\n1. Bubble sort (Customer name)\n2. Selection sort (Package name)\n3. Insertion sort (Package cost)\n{formating}===={formating}\nWhat would you like to sort:").strip()
+            types = input(f"\n{formating}SORT{formating}\n1. Bubble sort (Customer name)\n2. Selection sort (Package name)\n3. Insertion sort (Package cost)\n4. Cocktail sort(Package cost per pax)\n5. Shell sort (Package cost per pax)\n{formating}===={formating}\nWhat would you like to sort:").strip()
             if types == "1":
                 print(initalise.bubble_sort())
             elif types == "2":
@@ -30,9 +30,15 @@ class StaycationBookingRecordFactory:
          
             elif types == "3":
                 print(initalise.insertion_sort())
-     
+            elif types == "4":
+                print(initalise.cocktail_sort())
+            elif types == "5":
+                print(initalise.shell_sort())
+        
+
             else:
                 print("Not a proper value for sort")
+                continue
             print("\n"+formatingTwo)
             [print(x) for x in initalise.initaliser]
             print(formatingTwo)

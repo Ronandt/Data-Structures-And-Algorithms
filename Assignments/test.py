@@ -1,39 +1,36 @@
-# Function to do insertion sort
-def insertionSort(arr):
+def shellSort(arr, n):
+    # code here
+    gap=n//2
+     
+     
+    while gap>0:
+        j=gap
+        # Check the array in from left to right
+        # Till the last possible index of j
+        while j<n:
+            i=j-gap # This will keep help in maintain gap value
+             
+            while i>=0:
+                # If value on right side is already greater than left side value
+                # We don't do swap else we swap
+                if arr[i+gap]>arr[i]:
  
-    # Traverse through 1 to len(arr)
-    for i in range(1, len(arr)):
+                    break
+                else:
+                    arr[i+gap],arr[i]=arr[i],arr[i+gap]
  
-        key = arr[i]
- 
-        # Move elements of arr[0..i-1], that are
-        # greater than key, to one position ahead
-        # of their current position
-        j = i-1
-        while j >= 0 and key < arr[j] :
-                arr[j + 1] = arr[j]
-                j -= 1
-                print(arr)
-        print(arr)
-        arr[j + 1] = key
+                i=i-gap # To check left side also
+                            # If the element present is greater than current element
+            j+=1
+        gap=gap//2
  
  
-# Driver code to test above
-arr = [12, 11, 13, 11, 6]
-insertionSort(arr)
-for i in range(len(arr)):
-    print ("% d" % arr[i])
  
-# This code is contributed by Mohit Kumra
-
-def insert(arr):
-    for i in range(1,len(arr)):
-        while arr[i-1] > arr[i] and i > 0:
-            arr[i], arr[i-1] = arr[i-1], arr[i]
-            i -= 1 
-            print(arr)
-        print(arr)
-    return arr 
-
-arr = [23, 55, 12, 99, 66, 33]
-print(insert(arr))
+ 
+ 
+# driver to check the code
+arr2 = [12, 34, 54, 2, 3]
+print("input array:",arr2)
+ 
+shellSort(arr2,len(arr2))
+print("sorted array",arr2)

@@ -36,3 +36,8 @@ class AbstractFilterMethods(ABC):
     def range_filter(self):
         pass
 
+class AbstractBonusMethods(ABC):
+    @abstractmethod
+    def cocktail_sort(self):
+        pass
+

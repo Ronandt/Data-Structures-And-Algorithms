@@ -1,8 +1,8 @@
-from AbstractClasses import AbstractFilterMethods, AbstractSearchMethods, AbstractSortingMethods
+from AbstractClasses import AbstractFilterMethods, AbstractSearchMethods, AbstractSortingMethods, AbstractBonusMethods
 from AlgorirthmDataPipeline import AlgorithmDataPipeline
 
 
-class AlgorithmMethods(AbstractSortingMethods, AbstractFilterMethods, AbstractSearchMethods):
+class AlgorithmMethods(AbstractSortingMethods, AbstractFilterMethods, AbstractSearchMethods, AbstractBonusMethods):
 
     def __init__(self, initaliser):
         self.initaliser = initaliser
@@ -148,3 +148,46 @@ class AlgorithmMethods(AbstractSortingMethods, AbstractFilterMethods, AbstractSe
         list_of_objects = [str(x) for x in self.initaliser if range_list[0]
                            <= x.package_cost_per_pax <= range_list[1]]
         return "\n".join(list_of_objects) if len(list_of_objects) > 0 else "No records found"
+    
+    def cocktail_sort(self):
+        not_swap = True
+        start, end = 0, len(self.initaliser) - 1
+        for _ in range(len(self.initaliser)):
+            for x in range(start, end):
+                if self.initaliser[x].package_cost_per_pax > self.initaliser[x+1].package_cost_per_pax:
+                    self.initaliser[x], self.initaliser[x+1] = self.initaliser[x+1], self.initaliser[x]
+                    not_swap = False
+            end-=1 #-1 as we don't want to scan through the same thing
+      
+    
+            for x in range(end-1, start -1 , -1): #-1 because we have +1 here so it compensates, start-1 to compensate for range stop
+                if self.initaliser[x].package_cost_per_pax > self.initaliser[x+1].package_cost_per_pax:
+                    self.initaliser[x], self.initaliser[x+1] = self.initaliser[x+1], self.initaliser[x] 
+                    not_swap = False
+            start += 1 # don't scan the same thing
+            if not_swap:
+                break
+        return "List has been sorted!"
+
+    def shell_sort(self):
+        gap = len(self.initaliser)//2
+        while gap > 0:
+            j = gap
+            while j < len(self.initaliser):
+                i = j-gap
+         
+                while i>=0:
+                    print(i, i+gap, j)
+                    if self.initaliser[i + gap].package_cost_per_pax > self.initaliser[i].package_cost_per_pax:
+                        break
+                    else:
+                        self.initaliser[i + gap], self.initaliser[i] = self.initaliser[i], self.initaliser[i+gap]
+                    i -=gap
+                    print(i)
+                j += 1
+            gap //=2 
+        
+        
+
+        
+        return "List has been sorted"
