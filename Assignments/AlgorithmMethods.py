@@ -1,3 +1,4 @@
+from click import get_app_dir
 from AbstractClasses import AbstractFilterMethods, AbstractSearchMethods, AbstractSortingMethods, AbstractBonusMethods
 from AlgorirthmDataPipeline import AlgorithmDataPipeline
 
@@ -169,25 +170,32 @@ class AlgorithmMethods(AbstractSortingMethods, AbstractFilterMethods, AbstractSe
                 break
         return "List has been sorted!"
 
+    def comb_sort(self):
+
+        n = len(self.initaliser)
+        gap = n
+        swapped = True
+        while gap>1 or swapped:
+            gap = min((gap * 10)//3, 1)
+            swapped = False
+            for i in range(0, n-gap):
+                if self.initaliser[i].package_cost_per_pax > self.initaliser[i + gap].package_cost_per_pax:
+                    self.initaliser[i], self.initaliser[i + gap] = self.initaliser[i + gap], self.initaliser[i]
+                    swapped = True
+
     def shell_sort(self):
-        gap = len(self.initaliser)//2
-        while gap > 0:
-            j = gap
+        gaps =  [701, 301, 132, 57, 23, 10, 4, 1]
+        for gap in gaps:
+            j = gap #e.g 4
             while j < len(self.initaliser):
-                i = j-gap
-         
-                while i>=0:
-                    print(i, i+gap, j)
-                    if self.initaliser[i + gap].package_cost_per_pax > self.initaliser[i].package_cost_per_pax:
+                i = j-gap 
+                while i>=0: #check when it goes down
+                    if self.initaliser[i + gap].number_of_pax > self.initaliser[i].number_of_pax:
                         break
                     else:
                         self.initaliser[i + gap], self.initaliser[i] = self.initaliser[i], self.initaliser[i+gap]
-                    i -=gap
+                    i -=gap #go backwards if it doesn't compare
                     print(i)
-                j += 1
-            gap //=2 
-        
-        
-
+                j += 1 #displace +1 to 5 to move on
         
         return "List has been sorted"
