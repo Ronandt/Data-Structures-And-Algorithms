@@ -74,7 +74,7 @@ class StaycationBookingRecord:
         return f"Package name: {self.package_name}, Customer name: {self.customer_name}, Number of pax: {self.number_of_pax}, Package cost per pax: {self.package_cost_per_pax}"
 
     def __repr__(self) -> str:
-        return f"(PackageName: {self.package_name}, CustomerName: {self.customer_name}, NumberOfPax: {self.number_of_pax}, PackageCostPerPax: {self.package_cost_per_pax})"
+        return f"PackageName: {self.package_name}, CustomerName: {self.customer_name}, NumberOfPax: {self.number_of_pax}, PackageCostPerPax: {self.package_cost_per_pax}"
     
     def __eq__(self, __o: object) -> bool:
         for x in [c for c in dir(self) if not c.startswith("__")]:

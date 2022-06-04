@@ -41,3 +41,15 @@ class AbstractBonusMethods(ABC):
     def cocktail_sort(self):
         pass
 
+    @abstractmethod
+    def comb_sort(self):
+        pass
+
+    @abstractmethod
+    def heap_sort(self):
+        pass
+
+    @abstractmethod
+    def shell_sort(self):
+        pass
+

@@ -22,7 +22,7 @@ class StaycationBookingRecordFactory:
         query = input(
             f"\n{formating}CHOICES{formating}\n1.Sort\n2.Search & Update\n3.Filter\n4.Display\n5.Exit\n{formating}{formating}======\nWhat is your choice: ").lower().strip()
         if query == "1":
-            types = input(f"\n{formating}SORT{formating}\n1. Bubble sort (Customer name)\n2. Selection sort (Package name)\n3. Insertion sort (Package cost)\n4. Cocktail sort(Package cost per pax)\n5. Comb sort (Package cost per pax)\n6. Shell sort (Number of pax)\n{formating}===={formating}\nWhat would you like to sort:").strip()
+            types = input(f"\n{formating}SORT{formating}\n1. Bubble sort (Customer name)\n2. Selection sort (Package name)\n3. Insertion sort (Package cost)\n4. Cocktail sort(Package cost per pax)\n5. Comb sort (Package cost per pax)\n6. Shell sort (Number of pax)\n7. Heap sort (Number of pax)\n{formating}===={formating}\nWhat would you like to sort:").strip()
             if types == "1":
                 print(initalise.bubble_sort())
             elif types == "2":
@@ -35,6 +35,8 @@ class StaycationBookingRecordFactory:
                 print(initalise.comb_sort())
             elif types == "6":
                 print(initalise.shell_sort())
+            elif types == "7":
+                print(initalise.heap_sort())
             else:
                 print("Not a proper value for sort")
                 continue
