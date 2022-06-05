@@ -38,7 +38,7 @@ class AlgorithmDataPipeline:
                 raw_pax = input("Change number of pax (input nothing to skip): ").strip()
                 if raw_pax != "":
                     pax = int(raw_pax)
-                    arg1.number_of_pax = pax
+                    arg1.number_of_pax = max(0, pax)
                 break
             except:
                 print("Not valid pax")
@@ -48,7 +48,7 @@ class AlgorithmDataPipeline:
                 raw_package_cost = input("Change package cost per pax(input nothing to skip): ").strip()
                 if raw_package_cost !="":
                     package_cost = float(raw_package_cost)
-                    arg1.package_cost_per_pax = package_cost
+                    arg1.package_cost_per_pax = max(0, package_cost)
                 break
             except:
                 print("Not valid package cost")

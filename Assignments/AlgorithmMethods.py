@@ -68,7 +68,7 @@ class AlgorithmMethods(AbstractSortingMethods, AbstractFilterMethods, AbstractSe
                 targets.append(x)
                         
         if len(targets) == 0:
-            print("No result found")   
+            return "No result found"
         elif len(targets) > 1:
             print("\nPackage Selection: ")
         elif len(targets) == 1:
@@ -85,7 +85,7 @@ class AlgorithmMethods(AbstractSortingMethods, AbstractFilterMethods, AbstractSe
                         continue
                     break
                 except ValueError:
-                    print("Plesze choose a proper Booking Record by index")
+                    print("Please choose a proper Booking Record by index")
         return AlgorithmDataPipeline.updateRecord(self.initaliser[index])
        
 
