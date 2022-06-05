@@ -1,4 +1,5 @@
 
+#Declan, 212803T, IT2153-06
 class StaycationBookingRecord:
     def __init__(self, package_name: str, customer_name: str, number_of_pax: int, package_cost_per_pax: float):
         self._package_name = package_name

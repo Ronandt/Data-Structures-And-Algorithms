@@ -1,6 +1,8 @@
-from click import get_app_dir
+#Declan, 212803T, IT2153-06
+
 from AbstractClasses import AbstractFilterMethods, AbstractSearchMethods, AbstractSortingMethods, AbstractBonusMethods
 from AlgorirthmDataPipeline import AlgorithmDataPipeline
+
 
 
 class AlgorithmMethods(AbstractSortingMethods, AbstractFilterMethods, AbstractSearchMethods, AbstractBonusMethods):
@@ -211,7 +213,8 @@ class AlgorithmMethods(AbstractSortingMethods, AbstractFilterMethods, AbstractSe
             largest = r
         if largest != i:
             self.initaliser[i], self.initaliser[largest] = self.initaliser[largest], self.initaliser[i]
-            self.heapify(n, largest) #check again
+            self.heapify(n, largest) #check again, nodes index is modified
+        
 
 
     def heap_sort(self):
@@ -220,7 +223,7 @@ class AlgorithmMethods(AbstractSortingMethods, AbstractFilterMethods, AbstractSe
             self.heapify(length, i)
         for i in range(length-1, 0, -1):
             self.initaliser[i], self.initaliser[0] = self.initaliser[0], self.initaliser[i]
-            self.heapify(i, 0)
+            self.heapify(i, 0) #reduction of nodes and ttransforming the heap
         return "List has been sorted"
 
 

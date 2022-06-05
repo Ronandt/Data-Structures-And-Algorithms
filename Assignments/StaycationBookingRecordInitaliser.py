@@ -1,3 +1,5 @@
+#Declan, 212803T, IT2153-06
+
 from AlgorithmMethods import AlgorithmMethods
 from StaycationBookingRecord import StaycationBookingRecord
 

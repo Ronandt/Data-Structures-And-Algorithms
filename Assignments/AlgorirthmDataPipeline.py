@@ -1,6 +1,4 @@
-
-from operator import methodcaller
-
+#Declan, 212803T, IT2153-06
 
 class AlgorithmDataPipeline:
     @staticmethod
