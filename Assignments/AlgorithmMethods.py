@@ -62,32 +62,32 @@ class AlgorithmMethods(AbstractSortingMethods, AbstractFilterMethods, AbstractSe
         return "List has been sorted!"
 
     def linear_search(self, target, callback=None):
+        targets = []
         for x in range(len(self.initaliser)):
             if self.initaliser[x].customer_name.strip().lower() == target.strip().lower():
-                targets = [x]
-                current_index_positive = x
-                while current_index_positive < (len(self.initaliser) + 1) and self.initaliser[current_index_positive + 1].customer_name.lower().strip() == target:
-                    current_index_positive += 1
-                    targets.append(current_index_positive)
-                if len(targets) > 1:
-                    print("\nPackage Selection: ")
-                elif len(targets) == 1:
-                    print("\nYou Have Selected: ")
-                [print(
-                        f"({x}) {self.initaliser[x]}") for x in targets]
-                index = targets[0]
-                if len(targets) > 1:
-                    while 1:
-                        try:
-                            index = int(input("Choose your selected Booking Record: "))
-                            if index not in targets:
-                                print("That is not in the list of what you've searched")
-                                continue
-                            break
-                        except ValueError:
-                            print("Plesze choose a proper Booking Record by index")
-                return AlgorithmDataPipeline.updateRecord(self.initaliser[index])
-        return "Can't find result"
+                targets.append(x)
+                        
+        if len(targets) == 0:
+            print("No result found")   
+        elif len(targets) > 1:
+            print("\nPackage Selection: ")
+        elif len(targets) == 1:
+            print("\nYou Have Selected: ")
+        [print(
+                f"({x}) {self.initaliser[x]}") for x in targets]
+        index = targets[0]
+        if len(targets) > 1:
+            while 1:
+                try:
+                    index = int(input("Choose your selected Booking Record: "))
+                    if index not in targets:
+                        print("That is not in the list of what you've searched")
+                        continue
+                    break
+                except ValueError:
+                    print("Plesze choose a proper Booking Record by index")
+        return AlgorithmDataPipeline.updateRecord(self.initaliser[index])
+       
 
     def binary_search(self, target):
         self.selection_sort(self.initaliser)
@@ -100,8 +100,9 @@ class AlgorithmMethods(AbstractSortingMethods, AbstractFilterMethods, AbstractSe
                 if self.initaliser[mid].package_name.lower().strip() == target:
                     indexes = [mid]
                     current_index_minus = current_index_positive = mid
-    
-                    while current_index_minus-1 < 0 and self.initaliser[current_index_minus - 1].package_name.lower().strip() == target:
+         
+
+                    while current_index_minus-1 > 0 and self.initaliser[current_index_minus - 1].package_name.lower().strip() == target:
                         current_index_minus -= 1
                         indexes.append(current_index_minus)
      
@@ -206,10 +207,8 @@ class AlgorithmMethods(AbstractSortingMethods, AbstractFilterMethods, AbstractSe
         l = i * 2 + 1 #Next to those is a parent
         r = 2 * i + 2
         if l < n and self.initaliser[i].number_of_pax < self.initaliser[l].number_of_pax: #l < n/ r < n is an existing node
-            print(self.initaliser[l])
             largest = l
         if r < n and self.initaliser[largest].number_of_pax < self.initaliser[r].number_of_pax:
-            print(self.initaliser[i])
             largest = r
         if largest != i:
             self.initaliser[i], self.initaliser[largest] = self.initaliser[largest], self.initaliser[i]
