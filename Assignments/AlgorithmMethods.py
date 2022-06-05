@@ -184,11 +184,11 @@ class AlgorithmMethods(AbstractSortingMethods, AbstractFilterMethods, AbstractSe
                     swapped = True
 
     def shell_sort(self):
-        gaps =  [701, 301, 132, 57, 23, 10, 4, 1]
-        for gap in gaps:
+        marcin_curia_gap_sequence =  [701, 301, 132, 57, 23, 10, 4, 1]
+        for gap in marcin_curia_gap_sequence:
             j = gap #e.g 4
             while j < len(self.initaliser): #Check gap until ends to the array
-                i = j-gap 
+                i = j-gap #0 then plus plus plus
                 while i>=0: #check when it goes down
                     if self.initaliser[i + gap].number_of_pax > self.initaliser[i].number_of_pax:
                         break
@@ -198,13 +198,12 @@ class AlgorithmMethods(AbstractSortingMethods, AbstractFilterMethods, AbstractSe
                 j += 1 #displace +1 to 5 to move on
         
         return "List has been sorted"
+
     def heapify(self, n, i):
-        largest = i
-        l = i * 2 + 1
+        largest = i #2*i is a sibling, assume i is the largest first
+        l = i * 2 + 1 #Next to those is a parent
         r = 2 * i + 2
-
-
-        if l < n and self.initaliser[i].number_of_pax < self.initaliser[l].number_of_pax:
+        if l < n and self.initaliser[i].number_of_pax < self.initaliser[l].number_of_pax: #l < n/ r < n is an existing node
             print(self.initaliser[l])
             largest = l
         if r < n and self.initaliser[largest].number_of_pax < self.initaliser[r].number_of_pax:
@@ -212,12 +211,12 @@ class AlgorithmMethods(AbstractSortingMethods, AbstractFilterMethods, AbstractSe
             largest = r
         if largest != i:
             self.initaliser[i], self.initaliser[largest] = self.initaliser[largest], self.initaliser[i]
-            self.heapify(n, largest)
+            self.heapify(n, largest) #check again
 
 
     def heap_sort(self):
         length = len(self.initaliser)
-        for i in range(length//2, -1, -1): #number of subleafts roots
+        for i in range(length//2, -1, -1): #All the nodes
             self.heapify(length, i)
         for i in range(length-1, 0, -1):
             self.initaliser[i], self.initaliser[0] = self.initaliser[0], self.initaliser[i]
