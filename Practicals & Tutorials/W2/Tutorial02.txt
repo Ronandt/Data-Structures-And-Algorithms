@@ -1,0 +1,87 @@
+1. In mathematics and computer science, what is a typical definition of algorithm?
+============================================================================
+An algorithm (pronounced AL-go-rith-um) is a formula or procedure for solving a problem that is based on performing a series of specified actions.
+A computer program can be thought of as a complex algorithm.
+An algorithm is a small procedure that solves a recurring problem in mathematics and computer science.
+============================================================================
+
+
+
+
+
+
+
+2. During the lecture, a few examples of algorithms in action that we can observe in our
+daily lives were discussed e.g.:
+• audio and video compression algorithms (Instagram Live Video)
+• routing algorithms (Google Maps)
+• rendering algorithms (Pixar)
+Discuss other examples of algorithms in action that you can observe in your daily lives.
+============================================================================
+Using Shunting Yard Algorithm in a parser for a calculator (includes reverse polish notation)
+Sorting papers
+Search algorithms on a page
+============================================================================
+
+
+
+
+
+
+
+
+
+
+3. The Towers of Hanoi is a mathematical game that is often used in computer science to
+illustrate the use of algorithm for problem solving, particularly the concept and power of
+recursion (which we will discuss further in Topic 05).
+
+The game uses three pegs and a set of discs with holes through their centers. The discs
+are stacked on the leftmost peg, in order of size with the largest disc at the bottom.
+The objective of the game is to move all the discs from the first peg to the third peg,
+using the middle peg as a temporary holder – with the minimum number of moves. In
+addition, the following rules must be observed while moving the discs:
+
+• Only one disk may be moved at a time
+• A disk cannot be placed on top of a smaller disc
+• All discs must be stored on a peg except while being moved
+
+(Content adapted from: Starting out with Python. Tony Gaddis, Addison Wesley, 2nd
+Edition, 2012.)
+Devise an algorithm to solve the Tower of Hanoi problem.
+============================================================================
+From a one disc scenario, the solution of the game is simple
+
+  . Move the disc from peg 1 to peg 3
+
+  For a two-discs scenario, the solution requires 3 moves:
+    - Move disc 1 to peg 2
+    - Move disc 2 to peg 3
+    - Move disc 1 to peg 3
+
+Youtube Tower of Hanoi Explanation: https://www.youtube.com/watch?v=YstLjLCGmgg
+
+
+
+# This program simulates the Towers of Hanoi game.
+def main():
+        # Set up some initial values
+        num_discs = 3
+        from_peg = 1
+        to_peg = 3
+        temp_peg = 2
+
+        # Play the game
+        move_discs(num_discs, from_peg, to_peg, temp_peg)
+        print('All the pegs are moved!')
+
+
+def move_discs(num, from_peg, to_peg, temp_peg):
+    if num > 0:
+            move_discs(num - 1, from_peg, temp_peg, to_peg)
+            print('Move a disc from peg', from_peg , 'to peg', to_peg)
+            move_discs(num - 1, temp_peg, to_peg, from_peg)
+
+# Call the main function
+main()
+============================================================================
