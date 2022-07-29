@@ -14,7 +14,7 @@ Correctness and efficiency
 
 iv. What technique is used by computer scientists to compare the efficiency of
 algorithms independent of the programming language or hardware used.
-Big O/Theta/Omega Notation (Runtime analysis). It is scaled based on input.
+Big O/Theta/Omega Notation (Runtime analysis & Asymptomatic notations). It is scaled based on input. 
 
 v. In the “Guessing game” activity, what are the 2 approaches (for guessing the
 number) demonstrated?
