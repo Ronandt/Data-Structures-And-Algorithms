@@ -227,10 +227,18 @@ class CircularQueue:
         return self._count
     def enqueue(self, item):
         assert not self.is_full()
-        max_size = 
-        self._back = 
-        self._qArray[self._back]
+        max_size = len(self._qArray) 
+        self._back = (self._back + 1) % max_size
+        self._qArray[self._back] = item
         self._count += 1
+
+    def dequeue(self):
+        assert not self.is_empty()
+        item = self._qArray[self._front]
+        maxSize = len(self._qArray)
+        self._front = 
+        self._count -=
+        return 
 '''
 
 1.  *
