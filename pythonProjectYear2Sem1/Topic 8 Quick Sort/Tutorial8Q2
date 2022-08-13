@@ -1,0 +1,18 @@
+A stable sorting algorithm maintains the relative order of records with equal keys.
+That is, a sorting algorithm is stable if whenever there are two records R and S with the same key and with R
+appearing before S in the original list, R will appear before S in the sorted list.
+
+
+Are the sorting algorithms we have discussed so far
+i.e. bubble sort, selection sort, insertion sort, merge sort and quick sort stable algorithm?
+
+Solution:
+
+Stable Sort:
+- Bubble Sort
+- Insertion Sort
+- Merge Sort
+
+Unstable Sort:
+- Selection
+- Quick Sort

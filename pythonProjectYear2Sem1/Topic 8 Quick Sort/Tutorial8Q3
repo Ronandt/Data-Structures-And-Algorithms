@@ -1,0 +1,16 @@
+List one similarity and one difference between Merge Sort and Quick Sort.
+
+
+Similarities:
+
+- Both quick sort and merge sort are divide and conquer sorting algorithms
+- Both are sorting algorithms based on recursion
+
+Differences:
+- Merge sort is more efficient and works faster than quick sort in case of larger array size or datasets.
+- Merge sort is a stable algorithm where as the standard Quick sort implementation is not
+- Quick Sort is a in place algorithm, whereas the standard merge sort implementation is not
+- Quick Sort partition the list in any ratio, depending on the pivot value. Merge Sort partition the list in any ratio,
+  depending on the pivot value. Merge Sort Partition the list into 2 halves, i.e. n / 2
+
+

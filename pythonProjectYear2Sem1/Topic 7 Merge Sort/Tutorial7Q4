@@ -1,0 +1,13 @@
+Given a sequence 𝑆 of 𝑛 values, each equal to 0 or 1 e.g. [1, 0, 0, 1, 1, 1, 0].
+Describe an in-place method for sorting 𝑆.
+
+[NOTE: Do not use the standard sorting algorithms e.g. bubble sort, selection sort, insertion sort etc.
+to answer this question.]
+
+Solution:
+
+Imagine that we color the 0's blue and 1's red. Start with a marker at the beginning of the list and one at the end of the list.
+While the first marker is at a blue element, continue incrementing its index. Likewise, when the second marker is at a red element,
+continue decrementing its index. When the first marker has reached a red element and the second a blue element, swap the elements.
+Continue moving the markers and swapping until they meet. At this point, the sequence is ordered.
+

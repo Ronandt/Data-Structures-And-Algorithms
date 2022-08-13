@@ -1,0 +1,10 @@
+From a one disc scenario, the solution of the game is simple
+
+  . Move the disc from peg 1 to peg 3
+
+  For a two-discs scenario, the solution requires 3 moves:
+    - Move disc 1 to peg 2
+    - Move disc 2 to peg 3
+    - Move disc 1 to peg 3
+
+Youtube Tower of Hanoi Explanation: https://www.youtube.com/watch?v=YstLjLCGmgg

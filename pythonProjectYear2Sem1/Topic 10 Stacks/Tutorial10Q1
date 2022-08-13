@@ -1,0 +1,68 @@
+Q1 Transform the following infix expressions to postfix and prefix:
+
+a. (A * B) / C
+b. A – (B * C) + D / E
+c. (X – 5) + (7 * Z) / V
+d. V * W * 8 + Y - Z
+e. A / B * C – D + E
+
+Answer:
+a.
+Postfix
+((A*B)/C)
+((AB*)C/)
+AB*C/
+
+Prefix
+((A*B)/C)
+(/(*AB)C)
+/*A B C
+
+
+b.
+Postfix
+
+((A-(B*C) + (D/E))
+((A(BC*)- ) (DE/) +)
+ABC * - DE /+
+
+Prefix
+((A-(B*C) + (D/E))
+(+ (- A(*BC)) (/DE) )
++ - A * B C / D E
+
+c.
+Postfix
+((X-5) + ( (7*Z) / V ))
+((X 5 -) ( (7 Z * ) V /) +)
+X5 - 7Z * V / +
+
+Prefix
+((X-5) + ( (7*Z) / V ))
+(+(-X5) ( / (*7 Z) V )
++ - X5 / * 7Z V
+
+d.
+Postfix
+( ( ( (V * W) * 8) + Y) – Z )
+( ( ( (VW*) 8*) Y+) Z- )
+V W * 8 * Y + Z -
+
+
+Prefix
+( ( ( (V * W) * 8) + Y) – Z )
+(-(+(*(*VW)8)Y)Z)
+- + * * V W 8 Y Z
+
+
+e.
+Postfix
+( ( ( (A / B) * C) – D) + E)
+( ( ( ( AB / ) C*) D -) E+)
+AB / C * D - E +
+
+Prefix
+( ( ( (A / B) * C) – D) + E)
+(+ (- (* (/AB) C)  D) E)
++ - * / AB C D E
+

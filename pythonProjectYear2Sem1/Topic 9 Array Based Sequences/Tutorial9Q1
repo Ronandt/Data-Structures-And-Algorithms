@@ -1,0 +1,17 @@
+Python’s compact array stores a group of related variables (of the same type and size)
+one after another in a contiguous portion of the computer’s memory.
+
+
+
+For example, the above represent an array of six characters that occupies 12 bytes of memory (2 bytes for each character),
+starting from memory address 2146 to 2157. Each location within the array is a cell and we use an integer index to describe
+its location within the array (e.g. the cell of the above array with index 4 has content L and is stored in bytes 2154 and 2155).
+Given the memory address at which an array starts, the number of bytes per element, and a desired index within the array.
+Suggest a formula that can be used to compute the memory address of a specific cell in the array.
+
+Solution:
+
+Formula: start + cell-size * index
+
+E.g to find the memory address for cell 4 of the above array
+2146 + 2 * 4 = 2154

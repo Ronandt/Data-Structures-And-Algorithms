@@ -1,0 +1,45 @@
+At the lowest level, what is stored in the array is a consecutive sequence of memory
+addresses at which the elements of the sequence reside.
+Although the relative size of the individual elements may vary,
+the number of bits to store the memory address of each element is fixed (e.g. 64-bits per memory address).
+The diagram below represents a Python list – primes that is declared with the following statement:
+primes = [2, 3, 5, 7, 11, 13, 17, 19]
+
+Modify the diagram to reflect the changes (e.g. new lists / objects / references?)
+after each of the following statements is performed:
+a) temp = primes[3:6]
+b) temp[2] = 15
+Similarly, with the help of a diagram, describe the changes (e.g. new lists / objects / references?)
+after each of the following statements is performed:
+c) counters = [0] * 8
+d) counters[2] += 1
+
+
+Solution
+
+a) temp = primes[3:6]
+
+Refer to image in Tutorial9Q3AB.jpg
+
+b) temp[2] = 15
+
+Refer to image in Tutorial9Q3AB.jpg
+
+c) counters = [0] * 8
+
+Refer to image in Tutorial9Q3C.jpg
+
+d) counters[2] += 1
+
+Refer to image in Tutorial9Q3D.jpg
+
+
+
+
+
+
+
+
+
+
+

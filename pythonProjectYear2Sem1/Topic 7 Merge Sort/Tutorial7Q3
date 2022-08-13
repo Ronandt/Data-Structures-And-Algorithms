@@ -1,0 +1,27 @@
+In computer science, an in-place algorithm can be described as:
+
+    “an algorithm that does not need an extra space and produces an output in the
+    same memory that contains the data by transforming the input ‘in-place’.
+    However, a small constant extra space used for variables is allowed”
+
+Are the sorting algorithms we have discussed so far, i.e. bubble sort, selection sort,
+insertion sort and merge sort, in-place algorithm?
+
+Solution:
+- Bubble Sort
+- Selection Sort
+- Insertion Sort
+
+The implementation discussed during the lecture for Merge Sort is not an in place
+algorithm. For example,
+- list slicing creates a new list and
+- a new list also created when we call the mergeSortedLists() function to
+merge two sorted sublists
+
+    # Split the list and perform the recursive string
+    leftHalf = mergeSort( theList[ :mid ] )
+    rightHalf = mergeSort( theList[ :mid ] )
+
+    # Merge the two sorted sublists
+    newList = mergeSortedLists( leftHalf, rightHalf)
+    return newList
