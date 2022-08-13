@@ -1,11 +1,3 @@
-# Improvement:
-# I used heap sort instead of selection sort
-#
-# Heapsort is a comparison based sorting technique based on a Binary Heap data structure.
-# It is similar to selection sort where we first find the maximum element and place the maximum element at the end.
-# We repeat the same process for the remaining element.
-#
-# Time Complexity: O(n*log(n))
 
 def heapify(arr, n, i):
     largest = i

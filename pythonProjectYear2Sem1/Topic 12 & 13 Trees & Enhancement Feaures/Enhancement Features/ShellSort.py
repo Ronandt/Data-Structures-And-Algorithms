@@ -1,12 +1,4 @@
-# Improvement:
-# I used Shell Sort Instead of Insertion Sort
-#
-# Shell sort is a similar algorithm to insertion sort.
-# It sorts the elements that are far apart from one another and successively reduces the interval between the elements to be sorted.
-# The interval between the elements is reduced based on the sequence used. The logic of shell sort is to sort entries that are further
-# away first. This means that for a partially sorted list, it should be faster than O(n^2) which is the time complexity of insertion sort.
-# This means that shell sort is faster on average than insertion sort.
-# Shell Sort has a time complexity of O(nlog n) at its best, O(n^2) at its worst and O(nlog n) as its average.
+
 
 def shellSort(alist):
     sublistcount = len(alist)//2
