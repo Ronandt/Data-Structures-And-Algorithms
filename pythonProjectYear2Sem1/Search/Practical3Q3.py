@@ -8,15 +8,6 @@ def binarySearch( theValues, target ):
         if theValues[mid] == target:
             first_occurence = mid
             cont = True
-            # for last occurence
-            # last_occurence = mid
-            # cont = True
-            # while last_occurence >0 and cont:
-            #     if theValues[last_occurence+1] == target:
-            #         last_occurence +=1
-            #     else:
-            #         cont = False
-            # for first_occurence
             while first_occurence >0 and cont:
                 if theValues[first_occurence -1] == target:
                     first_occurence -=1

@@ -10,14 +10,3 @@ def distinct_number(number):
 
 print(distinct_number(123))
 
-
-# def distinct_numbers(numbers):
-#     return len(set(numbers)) == len(numbers)
-
-
-# def distinct(data):
-#     for k in range(1, len(data)):
-#         for j in range(k):
-#             if data[j] == data[k]:
-#                 return False
-#     return True

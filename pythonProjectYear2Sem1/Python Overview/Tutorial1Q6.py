@@ -11,11 +11,3 @@ except EOFError:
 
 lines2 = []
 
-# while True:
-#     try:
-#         single = input("Enter a line (cltr-D to stop): ")
-#         lines2.append(single)
-#     except EOFError:
-#         break
-#
-# print('\n'.join(reversed(lines)))

@@ -1,22 +1,31 @@
 
-
-def shellSort(alist):
-    sublistcount = len(alist)//2
-    while sublistcount > 0:
-      for start_position in range(sublistcount):
-        gap_InsertionSort(alist, start_position, sublistcount)
-
-      sublistcount = sublistcount // 2
-
-def gap_InsertionSort(nlist,start,gap):
-    for i in range(start+gap,len(nlist),gap):
-
-        current_value = nlist[i]
-        position = i
-
-
-# Test Codes
-list_of_numbers = [10,51,2,18,4,31,13,5,23,64,29]
-print('Input List:', list_of_numbers)
-shellSort(list_of_numbers)
-print("Sorted List: ",list_of_numbers)
+# Python3 program for implementation of Shell Sort
+# Python3 program for implementation of Shell Sort
+  
+def shellSort(arr, n):
+    # code here
+    gap=n//2
+    while gap>0:
+        j=gap
+        while j<n:
+            i=j-gap 
+            while i>=0:
+                if arr[i+gap]>arr[i]:
+                    break
+                else:
+                    arr[i+gap],arr[i]=arr[i],arr[i+gap]
+                i=i-gap 
+            j+=1
+        gap=gap//2
+  
+  
+  
+  
+  
+# driver to check the code
+arr2 = [10,51,2,18,4,31,13,5,23,64,29]
+print("input array:",arr2)
+  
+shellSort(arr2,len(arr2))
+print("sorted array",arr2)
+  

@@ -20,7 +20,7 @@ def combSort(arr):
  
  
 
-arr = [ 8, 4, 1, 3, -44, 23, -6, 28, 0]
+arr = [ 10, 51, 2, 18, 4, 31, 13, 5, 23, 64, 29]
 combSort(arr)
  
 print ("Sorted array:")

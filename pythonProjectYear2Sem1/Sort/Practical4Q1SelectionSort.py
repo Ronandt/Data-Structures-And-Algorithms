@@ -12,8 +12,6 @@ def selectionSort(theSeq):
                 for j in range(i + 1, n):
                     if theSeq[j] < theSeq[smallNdx]:
                         smallNdx = j
-                # Swap the ith value and smallNdx value only if the smallest value
-                # is not already in its proper position
                 if smallNdx != i:
                     tmp = theSeq[i]
                     theSeq[i] = theSeq[smallNdx]

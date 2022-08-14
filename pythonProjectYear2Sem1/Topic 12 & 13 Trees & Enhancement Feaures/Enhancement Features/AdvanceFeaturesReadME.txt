@@ -1,7 +1,7 @@
 
 
 ========================================================================================================================================================
-Week 1
+Python overview
 Practical 1 Q1/2 CreditCard
 Filename: Practical1Q2Property.py/ Practical1Q1Property.py
 Improvement: Utilitsed @property instead of formal getter setters
@@ -12,7 +12,7 @@ The decorator pattern (@property) is a pythonic way and it is used throughout li
 
 ==================================================================================================================================================
 ================================================================================================================================================
-Week 3
+Search
 Practical 3 Q3 Binary Search
 Filename: ExponentialSearch.py
 Improvement:
@@ -24,7 +24,7 @@ Exponential Search begins with a subarray size of one, compares the last element
 Because exponential search is very similar to binary search, with the only difference being determining the range in which the element falls between the lists,
 
 ================================================================================================================================================
-Week 4
+Sort
 Practical 4 Q1 (bubble sort)
 Filename: Combsort.py
 Improvement: Used comb sort instead of bubble sort
@@ -44,9 +44,7 @@ It is commonly used as an educational tool to encourage algorithmic thinking.
 
 
 ===================================================================================================================================================
-
-
-Week 4
+Sort
 Practical 4 Q1 Selection Sort
 Filename: Heap Sort.py
 Improvement:
@@ -58,7 +56,7 @@ We repeat the process for the final element.
 
 Time Complexity: O(n*log(n))
 ================================================================================================================================================
-Week 4
+Sort
 Practical 4 Q2 Shell Sort
 Filename: ShellSort.py
 Improvement:
@@ -76,20 +74,17 @@ Worst: O(n^2)(Depends on gap sequence)
 
 
 ================================================================================================================================================
-Topic 6 Recursion
-Tutorial 6 Q4
-Filename: ReverseFunctionPalindromeChecker.py
-Is it a Palindrome?
+Advanced sort
+Filename: InPlaceMergeSort.py
 
 Improvement:
-Checking If String is a Palindrome with a reverse Function
+Turning merge sort which has a space complexity of O(n) to O(1). This can take up less memory 
 
-Python enables us to use the reverse function. We know intuitively that a word read forwards and backwards, if same is a palindrome.
-Hence, let us generate the forward and backward string for the same, and check if the two strings are the same.
+Using in place merge sort would be fast and take up less space. This is especially useful for large datasets and usage of data warehouses.
+The in-place merge sort utilises recursion and uses indexes instead of creating a new array.  
 
-Link:https://www.mygreatlearning.com/blog/palindrome-in-python/#reverse-function
 ================================================================================================================================================
-Topic 10 Stacks
+ 10 Stacks
 Practical10Q2
 Filename: Practical10Q2Enhancement.py
 Improvement: Instead of the user being able to enter a postfix expression, the user is able to enter infix and the system is able to parse it
